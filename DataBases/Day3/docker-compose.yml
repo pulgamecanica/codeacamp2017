@@ -1,0 +1,9 @@
+services:
+  ruby-app:
+    build: .
+    volumes:
+      - ".:/app"
+    working_dir: /app
+    command: ["bash"]
+    ports:
+      - "3000:3000"  # Expose port 3000 for web access if you add a web server in the future
